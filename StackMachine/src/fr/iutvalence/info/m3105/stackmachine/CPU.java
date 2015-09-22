@@ -28,6 +28,8 @@ public class CPU
 	public final static int DUP		= 0x14;
 	public final static int POP		= 0x15;
 	
+	private IO ioSystem;
+	
 	// TODO something is missing here...
 
 	public void run()
@@ -178,5 +180,45 @@ public class CPU
 		}		
 	}
 
+	
+
 	// TODO something is missing here...
+	
+	public void wireToProgramMemory(Memory programMemory) 
+	{
+		
+		
+	}
+
+	public void wireToExpStack(Stack expStack) 
+	{
+		
+		
+	}
+
+	public void wireToCallStack(Stack callStack) 
+	{
+		
+		
+	}
+
+	public void wireToIoSubsystem(IO ioSystem) 
+	{
+		
+		
+	}
+
+
+
+	public void clearStacks() 
+	{
+		
+	}
+
+
+
+	public void setPC(int p_address) 
+	{
+		
+	}
 }
