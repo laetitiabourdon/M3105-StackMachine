@@ -1,0 +1,14 @@
+window_sizes 1200 925 300 900 682 82
+diagrams
+  active  classdiagram_ref 128002 // StackMachine
+    890 740 100 4 0 0
+end
+show_stereotypes
+selected operation_ref 128898 // write
+open
+  class_ref 128002 // CPU
+  class_ref 128130 // IO
+  class_ref 128258 // Machine
+  class_ref 128514 // Memory
+end
+end

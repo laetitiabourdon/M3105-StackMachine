@@ -10,6 +10,6 @@ public class Stack
 		//this.stackSize = p_stack;
 		
 		this.intTableOfTheStack = new int[p_stack];
-		
+		 
 	}
 }
