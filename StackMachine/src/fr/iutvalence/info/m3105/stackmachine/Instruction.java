@@ -18,7 +18,7 @@ public class Instruction {
 
 	public int[] getParams() 
 	{
-		return this.parameters;
+		return this.parameters; 
 	}
 
 }
