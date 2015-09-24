@@ -2,9 +2,11 @@ package fr.iutvalence.info.m3105.stackmachine;
 
 public class Instruction {
 
-	public Instruction(int p_num, Object p_object) 
+	private int[] parameters;
+	
+	public Instruction(int p_num, int[] p_param) 
 	{
-		
+		this.parameters = p_param;
 		
 	}
 
@@ -16,7 +18,7 @@ public class Instruction {
 
 	public int[] getParams() 
 	{
-		return null;
+		return this.parameters;
 	}
 
 }

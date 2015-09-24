@@ -2,9 +2,11 @@ package fr.iutvalence.info.m3105.stackmachine;
 
 public class Program {
 
+	private Instruction[] instructions;
+	
 	public Program(Instruction[] p_instructions) 
 	{
-		
+		this.instructions = p_instructions;
 	}
 
 	public int getInstructionCount() 
@@ -15,7 +17,7 @@ public class Program {
 	public Instruction getInstructionAt(int p_instructionNumber) 
 	{
 		
-		return null;
+		return this.instructions[p_instructionNumber];
 	}
 
 }

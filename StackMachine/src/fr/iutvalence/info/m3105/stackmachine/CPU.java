@@ -30,7 +30,17 @@ public class CPU
 	
 	private IO ioSystem;
 	
-	// TODO something is missing here...
+	private Memory programMemory;
+	private Stack expStack;
+	private Stack callStack;
+	
+	public CPU()
+	{
+		this.ioSystem = null;
+		this.expStack = null;
+		this.callStack = null;
+		this.programMemory = null;
+	}
 
 	public void run()
 	{
@@ -186,33 +196,30 @@ public class CPU
 	
 	public void wireToProgramMemory(Memory programMemory) 
 	{
-		
-		
+		this.programMemory = programMemory;
 	}
 
 	public void wireToExpStack(Stack expStack) 
 	{
-		
-		
+		this.expStack = expStack;
 	}
 
 	public void wireToCallStack(Stack callStack) 
 	{
-		
-		
+		this.callStack = callStack;
 	}
 
 	public void wireToIoSubsystem(IO ioSystem) 
 	{
-		
-		
+		this.ioSystem = ioSystem;
 	}
 
 
 
 	public void clearStacks() 
 	{
-		
+		this.expStack.clear();
+		this.callStack.clear();
 	}
 
 
