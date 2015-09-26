@@ -48,8 +48,7 @@ public class CPU
 		{
 			while (true)
 			{
-				// TODO something is missing here...
-
+				int opCode;
 				// System.err.print("@" + this.programCounter + ": ");
 				switch (opCode)
 				{
@@ -61,7 +60,7 @@ public class CPU
 					}
 					case PUSH:
 					{
-						// TODO something is missing here...
+						this.expStack.popValueInStack(p_value);
 						break;
 					}
 					case ADD:
@@ -126,7 +125,8 @@ public class CPU
 					}
 					case IN:
 					{
-						// TODO something is missing here...
+						this.ioSystem.read();
+						
 						break;
 					}
 					case OUT:

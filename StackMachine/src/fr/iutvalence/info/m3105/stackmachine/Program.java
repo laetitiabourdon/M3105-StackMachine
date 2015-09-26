@@ -11,7 +11,12 @@ public class Program {
 
 	public int getInstructionCount() 
 	{
-		return 0;
+		int numberOfInstruction = 0;
+		for (int i = 0; i < instructions.length; i++)
+		{
+			numberOfInstruction += 1;
+		}
+		return numberOfInstruction;
 	}
 
 	public Instruction getInstructionAt(int p_instructionNumber) 
