@@ -1,0 +1,16 @@
+window_sizes 1366 705 399 961 580 35
+diagrams
+  active  classdiagram_ref 128002 // StackMachine
+    961 596 100 4 12 0
+end
+show_stereotypes
+selected operation_ref 129807 // getStartAddress
+open
+  class_ref 128002 // CPU
+  class_ref 128386 // MachineLauncher
+  class_ref 128514 // Memory
+  class_ref 128642 // Program
+  class_ref 128770 // Instructions
+  class_ref 128898 // Stack
+end
+end
