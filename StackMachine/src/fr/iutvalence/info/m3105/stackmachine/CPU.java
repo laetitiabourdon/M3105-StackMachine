@@ -65,27 +65,32 @@ public class CPU
 					}
 					case ADD:
 					{
-						// TODO something is missing here...
+						int value = this.expStack.getValueOnTopOfStack() + this.expStack.getValueOnTopOfStack();
+						this.expStack.popValueInStack(value);
 						break;
 					}
 					case SUB:
 					{
-						// TODO something is missing here...
+						int value = this.expStack.getValueOnTopOfStack() - this.expStack.getValueOnTopOfStack();
+						this.expStack.popValueInStack(value);
 						break;
 					}
 					case MUL:
 					{
-						// TODO something is missing here...
+						int value = this.expStack.getValueOnTopOfStack() * this.expStack.getValueOnTopOfStack();
+						this.expStack.popValueInStack(value);
 						break;
 					}
 					case DIV:
 					{
-						// TODO something is missing here...
+						int value = this.expStack.getValueOnTopOfStack() / this.expStack.getValueOnTopOfStack();
+						this.expStack.popValueInStack(value);
 						break;
 					}
 					case MOD:
 					{
-						// TODO something is missing here...
+						int value = this.expStack.getValueOnTopOfStack() % this.expStack.getValueOnTopOfStack();
+						this.expStack.popValueInStack(value);
 						break;
 					}
 					case NEG:
