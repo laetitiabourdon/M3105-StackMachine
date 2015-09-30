@@ -32,7 +32,7 @@ public class Stack
 		numberOfElementInStack += 1;
 	}
 
-	public int getValueOnTopOfStack()
+	public int popValue()
 	{
 		numberOfElementInStack = numberOfElementInStack - 1;
 		return intTableOfTheStack[numberOfElementInStack + 1];

@@ -28,7 +28,7 @@ public class CPU
 	public final static int DUP		= 0x14;
 	public final static int POP		= 0x15;
 	
-	private IO ioSystem;
+	private ConsoleIO ioSystem;
 	
 	private Memory programMemory;
 	private Stack expStack;
@@ -66,31 +66,31 @@ public class CPU
 					}
 					case ADD:
 					{
-						int value = this.expStack.getValueOnTopOfStack() + this.expStack.getValueOnTopOfStack();
+						int value = this.expStack.popValue() + this.expStack.popValue();
 						this.expStack.pushValueInStack(value);
 						break;
 					}
 					case SUB:
 					{
-						int value = this.expStack.getValueOnTopOfStack() - this.expStack.getValueOnTopOfStack();
+						int value = this.expStack.popValue() - this.expStack.popValue();
 						this.expStack.pushValueInStack(value);
 						break;
 					}
 					case MUL:
 					{
-						int value = this.expStack.getValueOnTopOfStack() * this.expStack.getValueOnTopOfStack();
+						int value = this.expStack.popValue() * this.expStack.popValue();
 						this.expStack.pushValueInStack(value);
 						break;
 					}
 					case DIV:
 					{
-						int value = this.expStack.getValueOnTopOfStack() / this.expStack.getValueOnTopOfStack();
+						int value = this.expStack.popValue() / this.expStack.popValue();
 						this.expStack.pushValueInStack(value);
 						break;
 					}
 					case MOD:
 					{
-						int value = this.expStack.getValueOnTopOfStack() % this.expStack.getValueOnTopOfStack();
+						int value = this.expStack.popValue() % this.expStack.popValue();
 						this.expStack.pushValueInStack(value);
 						break;
 					}
@@ -215,7 +215,7 @@ public class CPU
 		this.callStack = callStack;
 	}
 
-	public void wireToIoSubsystem(IO ioSystem) 
+	public void wireToIoSubsystem(ConsoleIO ioSystem) 
 	{
 		this.ioSystem = ioSystem;
 	}

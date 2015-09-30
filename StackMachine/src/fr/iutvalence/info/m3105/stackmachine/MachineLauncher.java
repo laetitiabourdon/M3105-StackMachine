@@ -64,7 +64,7 @@ public class MachineLauncher
 			// Safely ignore this error, which is not one
 		}
 		
-		IO ioSystem = new IO(System.in, System.out, System.err);
+		ConsoleIO ioSystem = new ConsoleIO(System.in, System.out, System.err);
 		CPU cpu = new CPU();		
 		Machine machine = new Machine(cpu, programMemory, expStack, callStack, ioSystem );
 		try
