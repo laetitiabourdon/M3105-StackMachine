@@ -23,7 +23,7 @@ public class Stack
 		}
 	}
 	
-	public void popValueInStack(int p_value)
+	public void pushValueInStack(int p_value)
 	{
 		if (numberOfElementInStack < stackSize)
 		{

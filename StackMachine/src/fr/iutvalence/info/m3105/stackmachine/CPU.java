@@ -33,6 +33,7 @@ public class CPU
 	private Memory programMemory;
 	private Stack expStack;
 	private Stack callStack;
+	private Instruction opCode;
 	
 	public CPU()
 	{
@@ -48,7 +49,7 @@ public class CPU
 		{
 			while (true)
 			{
-				int opCode;
+				int opCode = this.opCode.getOpCode();
 				// System.err.print("@" + this.programCounter + ": ");
 				switch (opCode)
 				{
@@ -60,37 +61,37 @@ public class CPU
 					}
 					case PUSH:
 					{
-						this.expStack.popValueInStack(p_value);
+						this.expStack.pushValueInStack(p_value);
 						break;
 					}
 					case ADD:
 					{
 						int value = this.expStack.getValueOnTopOfStack() + this.expStack.getValueOnTopOfStack();
-						this.expStack.popValueInStack(value);
+						this.expStack.pushValueInStack(value);
 						break;
 					}
 					case SUB:
 					{
 						int value = this.expStack.getValueOnTopOfStack() - this.expStack.getValueOnTopOfStack();
-						this.expStack.popValueInStack(value);
+						this.expStack.pushValueInStack(value);
 						break;
 					}
 					case MUL:
 					{
 						int value = this.expStack.getValueOnTopOfStack() * this.expStack.getValueOnTopOfStack();
-						this.expStack.popValueInStack(value);
+						this.expStack.pushValueInStack(value);
 						break;
 					}
 					case DIV:
 					{
 						int value = this.expStack.getValueOnTopOfStack() / this.expStack.getValueOnTopOfStack();
-						this.expStack.popValueInStack(value);
+						this.expStack.pushValueInStack(value);
 						break;
 					}
 					case MOD:
 					{
 						int value = this.expStack.getValueOnTopOfStack() % this.expStack.getValueOnTopOfStack();
-						this.expStack.popValueInStack(value);
+						this.expStack.pushValueInStack(value);
 						break;
 					}
 					case NEG:

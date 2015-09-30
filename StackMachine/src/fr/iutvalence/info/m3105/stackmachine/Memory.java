@@ -17,7 +17,10 @@ public class Memory
 		}
 	}
 	
-	
+	public void read(int p_address)
+	{
+		
+	}
 	
 	public void write(int currentAddress, int instructionParam) 
 	{
